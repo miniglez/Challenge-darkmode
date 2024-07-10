@@ -1,0 +1,158 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ____________________________________________________________________*/
+
+/*Switch styles*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 58px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    background-color: #b9b9b9;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 2px;
+    background-color: rgb(255, 196, 0);
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-image: url(../assets/img/sol.png);
+    background-size: cover;
+    background-position: center;
+}
+
+input:checked + .slider {
+    background-color: #dbdbdb;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(27px);
+    -ms-transform: translateX(27px);
+    transform: translateX(27px);
+    background-color: rgb(138, 138, 255);
+    background-image: url(../assets/img/luna.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*Page styles*/
+
+*{
+    font-size: 18px;
+}
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.mainHeader div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+
+main img{
+    padding-bottom: 20px;
+    width: 90%;
+}
+
+main h1{
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+main p {
+    padding-bottom: 25px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: bold;
+}
